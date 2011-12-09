@@ -30,8 +30,8 @@ class KeySet < Set
 
   alias_method_chain :delete, :cache
 
-  def clear_with_cache(value=nil)
-    clear_without_cache(value)
+  def clear_with_cache
+    clear_without_cache
   ensure
     store
   end
